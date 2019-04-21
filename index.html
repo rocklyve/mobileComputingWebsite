@@ -5,24 +5,46 @@
           <meta name="description" content="Mobile Computing Website">
           <meta name="author" content="David Laubenstein">
           <title>Mobile Computing Website</title>
-          <link rel="stylesheet" href="css/bootstrap.css">
+          <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </div>
-  </div>
-</nav>
+            <a class="navbar-brand" href="#">Mobile Computing Website</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myDropDownNavBar" aria-controls="           myDropDownNavBar" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="myDropDownNavBar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Today <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tomorrow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">3-Days</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">6-Days</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">12-Days</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"          aria-expanded="false">
+                     Impressum
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Contact</a>
+                            <a class="dropdown-item" href="#">AGB</a>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+        </nav>
 
         <div>
           <p>Click the button to get your coordinates.</p>
@@ -31,7 +53,8 @@
         
            <p id="demo"></p>
         </div>
-        <script src="js/bootstrap.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
