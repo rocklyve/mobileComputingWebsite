@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'sf_compact_roundedultralight';
+    src: url('sf-compact-rounded-ultralight-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedblack';
+    src: url('sf-compact-rounded-black-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedbold';
+    src: url('sf-compact-rounded-bold-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedheavy';
+    src: url('sf-compact-rounded-heavy-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedlight';
+    src: url('sf-compact-rounded-light-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedmedium';
+    src: url('sf-compact-rounded-medium-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedregular';
+    src: url('sf-compact-rounded-regular-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedsemibold';
+    src: url('sf-compact-rounded-semibold-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'sf_compact_roundedthin';
+    src: url('sf-compact-rounded-thin-webfont.woff2') format('woff2'),
+         url('sf-compact-rounded-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
