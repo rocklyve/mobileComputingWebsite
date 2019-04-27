@@ -1,0 +1,42 @@
+html,body {
+  background-color: #E7E7E7;
+  height: 100%;
+  width: 100%;
+  margin: 1%; padding: 0;
+  font-family: Verdana, Arial;
+  font-size: 1em;
+  overflow: hidden;
+}
+
+div.box {
+  background: white;
+  width: 50%;
+  height: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 52px 15px rgba(0,0,0,0.22);
+}
+
+div.compass {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 64em) {
+  div.box {
+    width: 70%;
+    margin-top: 50px;
+  }
+} 
+
+a {
+  color: #ffff00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffff00;
+  text-decoration: underline;
+}
+
