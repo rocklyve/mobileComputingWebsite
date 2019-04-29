@@ -35,3 +35,37 @@ window.ondevicemotion = function(event) {
 	context.translate(-canvasWidth/2, -canvasWidth/2);
 	context.drawImage(img, canvasWidth/2 - half_width, canvasHeight/2 - half_height);
 }
+
+var angle = 0;
+var lastAngle = 0;
+
+function watchCompass() {
+
+      var suc = function(a){
+      var angle = roundNyc(a.magneticHeading);
+
+   l1 = angle -  lastAngle;
+   l2 = 360 - l1;
+
+  if( Math.abs(l1) >=  Math.abs(l2)){ 
+
+   r =   (lastAngle - l2) ; 
+
+  }else{
+
+   r =  angle ; 
+
+  }    
+
+   lastAngle = r;     
+   l1 = 0;
+   l2 = 0;
+
+document.getElementById('mycompass').style.webkitTransform = 'rotateZ(' + -r + 'deg)';
+
+      };
+      var fail = function(){};
+      var opt = {};
+      opt.frequency = 50;
+      timer = navigator.compass.watchHeading(suc,fail,opt);
+    } 
