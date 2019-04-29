@@ -11,7 +11,7 @@ window.ondevicemotion = function(event) {
 window.addEventListener("deviceorientation", function(event) {
 	var rose = document.querySelector("#rose")
 	rose.style.transform = "rotate(" + event.alpha + "deg)"
-	document.querySelector("#rose").innerHTML = "alpha = " + event.alpha;
+	
 	document.querySelector("#mag_beta").innerHTML = "beta = " + event.beta;
 	document.querySelector("#mag_gamma").innerHTML = "gamma = " + event.gamma;
 }, true);
