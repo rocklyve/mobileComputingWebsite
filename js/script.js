@@ -1,21 +1,21 @@
 window.addEventListener("deviceorientation", function(event) {
   // left
-  if (event.gamma < -10 && between(event.beta, -5, 5) && snake.dx === 0) {
+  if (event.gamma < -20 && between(event.beta, -15, 15) && snake.dx === 0) {
     snake.dx = -grid;
     snake.dy = 0;
   }
   // up
-  else if (event.beta > 10 && between(event.gamma, -5, 5) && snake.dy === 0) {
+  else if (event.beta < -20 && between(event.gamma, -15, 15) && snake.dy === 0) {
     snake.dy = -grid;
     snake.dx = 0;
   }
   // right
-  else if (event.gamma > 10 && between(event.beta, -5, 5) && snake.dx === 0) {
+  else if (event.gamma > 20 && between(event.beta, -15, 15) && snake.dx === 0) {
     snake.dx = grid;
     snake.dy = 0;
   }
   // down
-  else if (event.beta < -10 && between(event.gamma, -5, 5) === 0) {
+  else if (event.beta > 20 && between(event.gamma, -15, 15) === 0) {
     snake.dy = grid;
     snake.dx = 0;
   }
