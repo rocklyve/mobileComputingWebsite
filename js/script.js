@@ -15,11 +15,16 @@ window.addEventListener("deviceorientation", function(event) {
     snake.dy = 0;
   }
   // down
-  else if (event.beta > 20 && between(event.gamma, -15, 15) snake.dy === 0) {
+  else if (event.beta > 20 && between(event.gamma, -15, 15) && snake.dy === 0) {
     snake.dy = grid;
     snake.dx = 0;
   }
 }, true);
+
+function between(x, min, max) {
+  return x >= min && x <= max;
+}
+
 
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
