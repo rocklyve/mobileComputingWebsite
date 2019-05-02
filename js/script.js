@@ -1,39 +1,18 @@
-window.addEventListener("deviceorientation", function(event) {
-  // left
-  if (event.gamma < -0 && between(event.beta, -15, 15) && snake.dx === 0) {
-    snake.dx = -grid;
-    snake.dy = 0;
-  }
-  // up
-  else if (event.beta < -20 && between(event.gamma, -15, 15) && snake.dy === 0) {
-    snake.dy = -grid;
-    snake.dx = 0;
-  }
-  // right
-  else if (event.gamma > 20 && between(event.beta, -15, 15) && snake.dx === 0) {
-    snake.dx = grid;
-    snake.dy = 0;
-  }
-  // down
-  else if (event.beta > 20 && between(event.gamma, -15, 15) && snake.dy === 0) {
-    snake.dy = grid;
-    snake.dx = 0;
-  }
-}, true);
-
-function between(x, min, max) {
-  return x >= min && x <= max;
-}
-
-
 var canvas = document.getElementById('game');
+canvas.width = window.innerWidth * 0.8;
+canvas.height = window.innerWidth * 0.8;
+console.log(canvas.width)
 var context = canvas.getContext('2d');
-var grid = 16;
+// grid width is canvas.width / 25, so there are always 25 grids
+var grid = parseInt(canvas.width / 25);
 var count = 0;
-  
+
+var initialSnakeX = grid * 2;
+var initialSnakeY = grid * 2;
+
 var snake = {
-  x: 160,
-  y: 160,
+  x: initialSnakeX,
+  y: initialSnakeY,
   
   // snake velocity. moves one grid length every frame in either the x or y direction
   dx: grid,
@@ -45,9 +24,11 @@ var snake = {
   // length of the snake. grows when eating an apple
   maxCells: 4
 };
+
+// set position of apple on a constant on startup
 var apple = {
-  x: 320,
-  y: 320
+  x: parseInt(canvas.width -  7 * grid),
+  y: parseInt(canvas.height - 5 * grid),
 };
 // get random whole numbers in a specific range
 // @see https://stackoverflow.com/a/1527820/2124254
@@ -99,27 +80,55 @@ function loop() {
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
-      // canvas is 400x400 which is 25x25 grids 
-      apple.x = getRandomInt(0, 25) * grid;
-      apple.y = getRandomInt(0, 25) * grid;
+
+      apple.x = getRandomInt(0, canvas.width / grid) * grid;
+      apple.y = getRandomInt(0, canvas.height / grid) * grid;
     }
     // check collision with all cells after this one (modified bubble sort)
     for (var i = index + 1; i < snake.cells.length; i++) {
       
       // snake occupies same space as a body part. reset game
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
-        snake.x = 160;
-        snake.y = 160;
+        snake.x = initialSnakeX;
+        snake.y = initialSnakeY;
         snake.cells = [];
         snake.maxCells = 4;
         snake.dx = grid;
         snake.dy = 0;
-        apple.x = getRandomInt(0, 25) * grid;
-        apple.y = getRandomInt(0, 25) * grid;
+        apple.x = getRandomInt(0, canvas.width / grid) * grid;
+        apple.y = getRandomInt(0, canvas.height / grid) * grid;
       }
     }
   });
 }
+
+window.addEventListener("deviceorientation", function(event) {
+  // left
+  if (event.gamma < -0 && between(event.beta, -15, 15) && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up
+  else if (event.beta < -20 && between(event.gamma, -15, 15) && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right
+  else if (event.gamma > 20 && between(event.beta, -15, 15) && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down
+  else if (event.beta > 20 && between(event.gamma, -15, 15) && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+}, true);
+
+function between(x, min, max) {
+  return x >= min && x <= max;
+}
+
 // listen to keyboard events to move the snake
 document.addEventListener('keydown', function(e) {
   // prevent snake from backtracking on itself by checking that it's 
