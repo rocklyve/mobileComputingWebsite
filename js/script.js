@@ -1,6 +1,11 @@
 var canvas = document.getElementById('game');
-canvas.width = window.innerWidth * 0.8;
-canvas.height = window.innerWidth * 0.8;
+if (window.innerWidth < window.innerHeight) {
+	canvas.width = parseInt((window.innerWidth * 0.8)/25) * 25;
+	canvas.height = parseInt((window.innerWidth * 0.8)/25) * 25;	
+} else {
+	canvas.width = parseInt((window.innerHeight * 0.8)/25) * 25;
+	canvas.height = parseInt((window.innerHeight * 0.8)/25) * 25;
+}
 console.log(canvas.width)
 var context = canvas.getContext('2d');
 // grid width is canvas.width / 25, so there are always 25 grids
