@@ -1,6 +1,6 @@
 window.addEventListener("deviceorientation", function(event) {
   // left
-  if (event.gamma < -20 && between(event.beta, -15, 15) && snake.dx === 0) {
+  if (event.gamma < -0 && between(event.beta, -15, 15) && snake.dx === 0) {
     snake.dx = -grid;
     snake.dy = 0;
   }
@@ -15,15 +15,11 @@ window.addEventListener("deviceorientation", function(event) {
     snake.dy = 0;
   }
   // down
-  else if (event.beta > 20 && between(event.gamma, -15, 15) === 0) {
+  else if (event.beta > 20 && between(event.gamma, -15, 15) snake.dy === 0) {
     snake.dy = grid;
     snake.dx = 0;
   }
 }, true);
-
-function between(x, min, max) {
-  return x >= min && x <= max;
-}
 
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
