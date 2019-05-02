@@ -1,57 +1,13 @@
-<!doctype html>
-<html lang="en">
-    <head>
-          <meta charset="utf-8">
-          <meta name="description" content="Mobile Computing Website">
-          <meta name="author" content="David Laubenstein">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Mobile Computing Website</title>
-          <link rel="stylesheet" href="css/style.css">
-          <link rel="stylesheet" href="css/fonts/fonts.css">
-    </head>
-    
-    <body>
-        <!-- start context -->
-        <div class="box">
-            <div class="compass">
-                <h1>Compass</h1>
-                <!-- <p id="x_acc">No accelerometer found.</p>
-                <p id="y_acc"></p>
-                <p id="z_acc"></p>
-
-                <br />
-
-                <p id="mag_alpha">No magnetometer found.</p>
-                <p id="mag_beta"></p>
-                <p id="mag_gamma"></p> -->
-                <div class="container">
-                    <div class="compass">
-                        <div id="rose" class="compass__rose">
-                            <svg class="compass__rose__dial" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg">
-
-                              <circle cx="65" cy="65" r="56" stroke="black" stroke-width="1" fill="none" />
-                              <polyline points="63,9  67,9  65,13" fill="black"/>
-                              <polyline points="121,63  121,67  119,65" fill="black"/>
-                              <polyline points="63,121  67,121  65,119" fill="black"/>
-                              <polyline points="9,63  9,67  11,65" fill="black"/>
-
-                              <text x="65" y="4.2" font-size="5" text-anchor="middle" fill="black">N</text>
-                              <text x="127" y="67" font-size="5" text-anchor="middle" fill="black">E</text>
-                              <text x="65" y="129" font-size="5" text-anchor="middle" fill="black">S</text>
-                              <text x="2.8" y="67" font-size="5" text-anchor="middle" fill="black">W</text>
-
-                            </svg>    
-                        </div>
-                        <svg class="compass__pointer" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <polyline points="60,60  70,60  65,15" fill="#b60000"/>
-                            <polyline points="60,70  70,70  65,115" fill="yellow"/>
-                            <circle cx="65" cy="65" r="7" stroke="#b60000" stroke-width="7" fill="none" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end context -->
-        
-    </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <canvas width="400" height="400" id="game"></canvas>
+  </div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
 </html>
