@@ -14,3 +14,4 @@ It uses the **magnification** to find out the direction, your phone is tilted th
 
 ## Screenshot
 
+<img src="img/Screenshot.png" width="50%" title="Screenshot">
