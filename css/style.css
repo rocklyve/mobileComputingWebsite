@@ -1,22 +1,22 @@
-  html, body {
-    height: 100%;
-    width: 90%;
-    margin: 0px auto;
-    font-family: 'sf_compact_roundedregular',Verdana, Arial;
-    background-color: #E7E7E7;
-  }
-  
-  .header {
-    padding-top: 60px;
-    text-align: center;
-  }
-  .container {
-    margin-top: 50px;
-  }
+html, body {
+  height: 100%;
+  width: 90%;
+  margin: 0px auto;
+  font-family: 'sf_compact_roundedregular',Verdana, Arial;
+  background-color: #E7E7E7;
+}
 
-  canvas {
-    background: white;
-    box-shadow: 10px 10px 50px #c9c9c9;
-    -moz-box-shadow: 10px 10px 50px #c9c9c9;
-    -webkit-box-shadow: 10px 10px 50px #c9c9c9;
-  }
+.header {
+  padding-top: 60px;
+  text-align: center;
+}
+.container {
+  margin-top: 50px;
+}
+
+canvas {
+  background: white;
+  box-shadow: 10px 10px 50px #c9c9c9;
+  -moz-box-shadow: 10px 10px 50px #c9c9c9;
+  -webkit-box-shadow: 10px 10px 50px #c9c9c9;
+}
